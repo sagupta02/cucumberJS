@@ -1,0 +1,59 @@
+[
+  {
+    "description": "   As a user of Usabilla website\n   In order to submit a feedback \n   I should see the feedback button in homepage",
+    "keyword": "Feature",
+    "name": "Feedback Button",
+    "line": 1,
+    "id": "feedback-button",
+    "tags": [],
+    "uri": "tests/e2e/features/feedback_button.feature",
+    "elements": [
+      {
+        "id": "feedback-button;check-feedback-button-on-homepage",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Check Feedback Button on Homepage",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am at Usabilla website homepage",
+            "match": {
+              "location": "stepDefinitions/feedback_button.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should see feedback button",
+            "match": {
+              "location": "stepDefinitions/feedback_button.js:11"
+            },
+            "result": {
+              "status": "pending"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
