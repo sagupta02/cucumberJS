@@ -8,6 +8,7 @@ jobs:
       - image: circleci/node:11.10.0
 
     steps:
+      - checkout
       - run: npm install
       - run: npm test
 
