@@ -2,9 +2,9 @@
 This is a test framework for automating web application using Protractor with Cucumber and Javascript.
 
 ## Tools Stack :
-Protractor
-Javascript
-Cucumber.js: Cucumber is a very popular BDD framework that focuses more on features or stories. It mimics the format of user stories and utilizes Gherkin.
+- Protractor
+- Javascript
+- Cucumber.js: Cucumber is a very popular BDD framework that focuses more on features or stories. It mimics the format of user stories and utilizes Gherkin.
 
 ## Features
 1. Page Objects Design Pattern
