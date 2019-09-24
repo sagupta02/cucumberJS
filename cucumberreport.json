@@ -1,55 +1,115 @@
 [
   {
-    "description": "   As a user of Usabilla website\n   In order to submit a feedback \n   I should see the feedback button in homepage",
+    "description": "    As a user of Usabilla\n    I should be able to submit a Specific Feedback via Feedback button",
     "keyword": "Feature",
-    "name": "Feedback Button",
-    "line": 1,
-    "id": "feedback-button",
-    "tags": [],
-    "uri": "tests/e2e/features/feedback_button.feature",
+    "name": "Specific Feedback",
+    "line": 2,
+    "id": "specific-feedback",
+    "tags": [
+      {
+        "name": "@smoke",
+        "line": 1
+      },
+      {
+        "name": "@regression",
+        "line": 1
+      }
+    ],
+    "uri": "tests\\e2e\\features\\specific_feedback.feature",
     "elements": [
       {
-        "id": "feedback-button;check-feedback-button-on-homepage",
+        "id": "specific-feedback;submit-generic-feedback",
         "keyword": "Scenario",
-        "line": 7,
-        "name": "Check Feedback Button on Homepage",
-        "tags": [],
+        "line": 6,
+        "name": "Submit Generic Feedback",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          }
+        ],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 8,
-            "name": "I am at Usabilla website homepage",
+            "line": 7,
+            "name": "I am at Usabilla website",
             "match": {
-              "location": "stepDefinitions/feedback_button.js:4"
+              "location": "stepDefinitions\\generic_feedback.js:3"
             },
             "result": {
-              "status": "passed",
-              "duration": 2000000
+              "status": "pending",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I click on Feedback Button",
+            "match": {
+              "location": "stepDefinitions\\generic_feedback.js:8"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I select Specific Feedback",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I select area",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I provide valid data",
+            "match": {
+              "location": "stepDefinitions\\generic_feedback.js:18"
+            },
+            "result": {
+              "status": "skipped"
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 9,
-            "name": "I should see feedback button",
+            "line": 12,
+            "name": "I should be able to submit feedback",
             "match": {
-              "location": "stepDefinitions/feedback_button.js:11"
+              "location": "stepDefinitions\\generic_feedback.js:23"
             },
             "result": {
-              "status": "pending"
+              "status": "skipped"
             }
           },
           {
             "keyword": "After",
             "hidden": true,
             "match": {
-              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:26"
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
             },
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 1000000
             }
           }
         ]
