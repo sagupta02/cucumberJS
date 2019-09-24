@@ -10,8 +10,8 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - run: webdriver-manager update
-      - run: npm start
+      - run: npm run update
+      - run: npm run start
       - run: npm test
 
       # run tests!
