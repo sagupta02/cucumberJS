@@ -1,0 +1,15 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:11.10.0
+
+    steps:
+      - run: npm install
+      - run: npm test
+
+      # run tests!
+      - run: yarn test
