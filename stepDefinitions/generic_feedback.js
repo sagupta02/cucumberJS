@@ -1,32 +1,23 @@
 import { Given, When, Then } from 'cucumber'
-
-import {homePage} from '../pageObjects/homePage'
-// import {globals} from '../utilities/assertionLib'
-import {expect} from 'chai'
-
-const expect = globals.expect;
-
-Given('I am at Usabilla website', function (title) {
-  return expect(homePage.getHomePageTitle()).to.equal(title);
-  expect('s').to.eq
-})
+import { expect } from 'chai'
+import { homePage } from '../pageObjects/homePage'
+import { browser } from 'protractor';
+import {feedbackChoicePage} from '../pageObjects/feedbackTool/feedbackChoice'
+import {feedbackFormPage} from '../pageObjects/feedbackTool/feedbackForm'
+import {feedbackConfirmation} from '../pageObjects/feedbackTool/confirmation'
 
 When('I click on Feedback Button', function () {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending'
+  homePage.clickOnFeedbackButton();  
 })
 
 When('I select Generic Feedback', function () {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending'
+  browser.switchTo().frame(feedbackChoicePage.frameElement);
+  feedbackChoicePage.clickOnGenericFeedbackIcon();
 })
 
-When('I provide valid data', function () {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending'
+When('I provide following details for {string}', function (table) {
+  console.log(table.raw());
 })
 
 Then('I should be able to submit feedback', function () {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending'
 })

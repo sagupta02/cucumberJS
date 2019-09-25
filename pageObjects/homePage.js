@@ -1,16 +1,16 @@
-import { ElementFinder } from 'protractor'
+import { element, by } from 'protractor'
 
 class HomePage {
   constructor () {
-    this.feedbackButton = $('div[aria-label="Usabilla Feedback Button"]')
-  }
-
-  getHomePageTitle () {
-    return browser.getTitle()
+    this.feedbackButton = element(by.css('div[aria-label="Usabilla Feedback Button"]'));
   }
 
   isFeedbackButtonDisplayed () {
-    return this.feedbackButton.isDisplayed()
+    return this.feedbackButton.isDisplayed();
+  }
+
+  clickOnFeedbackButton() {
+    return this.feedbackButton.click();
   }
 }
 
