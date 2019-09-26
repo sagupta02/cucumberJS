@@ -1,28 +1,36 @@
 /* eslint-disable semi */
-import { element } from 'protractor';
+import { browser, element, by } from 'protractor';
+import { ExpectedConditions as EC} from 'protractor'
 
 class FeedbackForm {
   constructor () {
     this.subjectDropdown = element(by.xpath('//h4[text()="Please select a subject"]/following-sibling::select'));
-    this.commentInputField = element(by.xpath('//span[@class="conditional_forms"][contains(@style,"display: block")]//textarea'));
-    this.emailField = element(by.xpath('//span[@class="conditional_forms"][contains(@style,"display: block")]//input'));
     this.submitButton = element(by.xpath('//button[text()="Submit"]'));
   }
 
-  clickOnNpsScoreButton (number) {
-    return element(by.xpath(`//div[@class='nps-score']//input[@value='${number}']`)).click();
+  async selectWebsiteRating (emotion) {
+    return element(by.xpath(`//input[@title='${emotion}']/following-sibling::label`)).click();
   }
 
-  selectWebsiteRating (emotion) {
-    return element(by.xpath(`//input[@title='${emotion}']`)).click();
+  selectSubject (subjectName) {
+    return this.subjectDropdown.element(by.cssContainingText('option', subjectName)).click();
   }
 
-  enterEmail (email) {
-    return this.emailField.sendKeys(email);
+  setNpsScore (subjectName, number) {
+    return element(by.xpath(`//span[@data-condition='${subjectName.toLowerCase()}']//input[@value='${number}']`)).click();
   }
 
-  enterComments (comments) {
-    return this.commentInputField.sendKeys(comments);
+  setEmail (subjectName, email) {
+    return element(by.xpath(`//*[@aria-labelledby="email-input-${subjectName.toLowerCase()}"]`)).sendKeys(email);
+  }
+
+  setComments (subjectName, comments) {
+    return element(by.xpath(`//*[@aria-labelledby="comment-input-${subjectName.toLowerCase()}"]`)).sendKeys(comments);
+  }
+
+  clickOnSubmitButton () {
+    browser.wait(EC.visibilityOf(this.submitButton), 5000);
+    return this.submitButton.click();
   }
 }
 

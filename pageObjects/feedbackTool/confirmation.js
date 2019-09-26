@@ -3,7 +3,7 @@ import { element, by } from 'protractor'
 
 class FeedbackConfirmation {
   constructor () {
-    this.confirmationTextLocator = element(by.cssContainingText('Thanks for leaving feedback!'));
+    this.confirmationTextLocator = element(by.xpath('//h2[contains(text(),"Thanks for leaving feedback")]'));
     this.continueLink = element(by.css('a.continue'));
     this.closePopUpLink = element(by.css('a.close'));
     this.requestDemoLink = element(by.cssContainingText('Request a demo'));

@@ -7,7 +7,7 @@ Feature: Generic Feedback
         Given I am at Usabilla website homepage
         When I click on Feedback Button
         And I select Generic Feedback
-        And I provide following details for "compliment"
+        And I provide following details for "Compliment"
             | rating | comments | email | npsscore |
-            | happy | Good job! Very easy to use tool | test@test.com| 8 |
+            | Like | Good job! Very easy to use tool | test@test.com| 8 |
         Then I should be able to submit feedback
