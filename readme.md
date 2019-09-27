@@ -1,7 +1,7 @@
 **CircleCI Build Status:** [![CircleCI](https://circleci.com/gh/sart0701/cucumberJS/tree/sart0701-patch-1.svg?style=svg)](https://circleci.com/gh/sart0701/cucumberJS/tree/sart0701-patch-1)
 
 ## About
-This is a test automation framework for testing Usabilla webiste.
+This is a test automation framework for testing Usabilla website.
 
 ## Tools Stack :
 - Protractor: Protractor is an end-to-end test framework for Angular and AngularJS applications. Protractor runs tests against your application running in a real browser, interacting with it as a user would.
