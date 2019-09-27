@@ -2,9 +2,9 @@ exports.config = {
   framework: 'custom',
   // path relative to the current config file
   frameworkPath: require.resolve('protractor-cucumber-framework'),
-  seleniumAddress: 'http://localhost:4444/wd/hub',
-  // directConnect: true,
-  multiCapabilities: [
+  // seleniumAddress: 'http://localhost:4444/wd/hub',
+  directConnect: true,
+  /* multiCapabilities: [
     {
       browserName: 'chrome',
       shardTestFiles: true,
@@ -15,7 +15,10 @@ exports.config = {
       shardTestFiles: true,
       maxInstances: 2
     }
-  ],
+  ],*/
+  capabilities: {
+    browserName: 'chrome'
+  },
   specs: ['../tests/e2e/features/*.feature'],
   onPrepare: function () {
     browser.waitForAngularEnabled(false);
