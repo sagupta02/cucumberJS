@@ -12,6 +12,3 @@ jobs:
       - run: npm install
       - run: npm run update
       - run: npm test
-
-      # run tests!
-      - run: yarn test
