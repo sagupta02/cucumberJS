@@ -24,7 +24,7 @@ class HomePage {
   }
 
   async acceptCookiesAndClosePopup () {
-    if(await this._isCookiesPopUpDisplayed())
+    // if(await this._isCookiesPopUpDisplayed())
       return await this._clickOnAcceptCookiesButton();
   }
 }
