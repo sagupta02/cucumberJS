@@ -6,7 +6,7 @@ import {homePage} from '../pageObjects/homePage'
 
 Given('I am at Usabilla website homepage', async function () {
   browser.get('https://usabilla.com/');
-  
+  await browser.sleep(2000);
   await homePage.acceptCookiesAndClosePopup();
 
   expect(await browser.getTitle()).to.equal('Usabilla | Build Future-Proof Customer Experiences');

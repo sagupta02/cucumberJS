@@ -8,7 +8,7 @@ import {feedbackFormPage} from '../pageObjects/feedbackTool/feedbackForm'
 import {feedbackConfirmation} from '../pageObjects/feedbackTool/confirmation'
 
 When('I click on Feedback Button', async function () {
-  await homePage.clickOnFeedbackButton();  
+  await homePage.clickOnFeedbackButton();
 })
 
 When('I select Generic Feedback', async function () {
