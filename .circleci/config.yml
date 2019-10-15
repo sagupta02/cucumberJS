@@ -5,14 +5,10 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:11.10.0
+      - image: circleci/node:12-browsers
 
     steps:
       - checkout
       - run: npm install
       - run: npm run update
-      - run: npm run start
       - run: npm test
-
-      # run tests!
-      - run: yarn test
